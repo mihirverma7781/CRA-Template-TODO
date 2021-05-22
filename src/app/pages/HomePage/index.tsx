@@ -1,25 +1,16 @@
-import * as React from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { NavBar } from 'app/components/NavBar';
-import { Masthead } from './Masthead';
-import { Features } from './Features';
-import { PageWrapper } from 'app/components/PageWrapper';
-
+import { Todo } from 'app/components/Todo';
 export function HomePage() {
   return (
     <>
       <Helmet>
         <title>Home Page</title>
-        <meta
-          name="description"
-          content="A React Boilerplate application homepage"
-        />
+        <meta name="description" content="A Boilerplate application homepage" />
       </Helmet>
-      <NavBar />
-      <PageWrapper>
-        <Masthead />
-        <Features />
-      </PageWrapper>
+      <div className=" font-mono text-white  w-full  flex justify-center items-center">
+        <Todo />
+      </div>
     </>
   );
 }
